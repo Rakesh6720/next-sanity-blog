@@ -23,7 +23,7 @@ export default async function RootLayout({
         <header className="flex items-center justify-between"><Link className="text-lg font-bold" href="/">Rakesh</Link>
           <div className="flex items-center gap-3">
             {pages.map((page) => (
-              <Link className="hover:underline" key={page._id} href={`/page/${page.slug}`}>{page.title}</Link>
+              <Link className="hover:underline" key={page._id} href={`/${page.slug}`}>{page.title}</Link>
             ))}
           </div>
         </header>
