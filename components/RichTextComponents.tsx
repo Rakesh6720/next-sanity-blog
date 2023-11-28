@@ -39,7 +39,7 @@ export const RichTextComponents = {
         link: ({ children, value }: any) => {
             const rel = !value.href.startsWith("/") ? "noreferrer noopener" : undefined;
             return (
-                <Link href={value.href} rel={rel} className="underline hover:decoration-blue-700">{children}</Link>
+                <Link href={value.href} rel={rel} className="underline text-blue-500 hover:decoration-blue-700 hover:text-blue-600">{children}</Link>
             )
         }
     }
