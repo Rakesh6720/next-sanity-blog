@@ -1,3 +1,4 @@
+import { RichTextComponents } from "@/components/RichTextComponents";
 import { getPage } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 
@@ -13,7 +14,7 @@ export default async function Page({ params }: Props) {
             <h1 className="text-5xl font-extrabold drop-shadow">{page.title}</h1>
             <div className="text-lg text-gray-700 mt-10">
                 <article className="prose lg:prose-xl">
-                    <PortableText value={page.content} />
+                    <PortableText value={page.content} components={RichTextComponents} />
                 </article>
             </div>
         </div>
