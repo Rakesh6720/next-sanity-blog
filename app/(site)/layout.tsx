@@ -20,12 +20,13 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`max-w-3xl mx-auto py-10 ${inter.className}`}>
-        <header className="flex items-center justify-between"><Link className="text-lg font-bold" href="/">Rakesh</Link></header>
-        <div className="flex items-center gap-3">
-          {pages.map((page) => (
-            <Link className="hover:underline" key={page._id} href={`/page/${page.slug}`}>{page.title}</Link>
-          ))}
-        </div>
+        <header className="flex items-center justify-between"><Link className="text-lg font-bold" href="/">Rakesh</Link>
+          <div className="flex items-center gap-3">
+            {pages.map((page) => (
+              <Link className="hover:underline" key={page._id} href={`/page/${page.slug}`}>{page.title}</Link>
+            ))}
+          </div>
+        </header>
         <main className="py-20">
           {children}
         </main>
